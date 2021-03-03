@@ -1,0 +1,58 @@
+/* .section {
+	width: 80%;
+	margin: 0 auto;
+	height: 500px;
+	position: relative;
+	padding: 0;
+} */
+
+.section p {
+	/* float: left;
+	padding-left: 10%; */
+	/* writing-mode: vertical-lr; */
+
+	letter-spacing: 2px;
+	font-family: 'Poppins', sans-serif;
+	font-weight: normal;
+}
+
+.hscroll-line {
+	left: 48%;
+	height: 3px;
+	position: absolute;
+	overflow: hidden;
+	width: 60px;
+	transform: rotate(90deg);
+	/* tranform-origin: 50% 50%; */
+}
+
+.hscroll-line::before,
+.hscroll-line::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	content: '';
+}
+
+.hscroll-line:before {
+	background: rgb(32, 33, 33);
+}
+
+.hscroll-line::after {
+	background: blanchedalmond;
+	animation: move 3s infinite;
+}
+
+@keyframes move {
+	0% {
+		transform: translate3d(-200%, 0, 0);
+	}
+	60% {
+		transform: translate3d(100%, 0, 0);
+	}
+	100% {
+		transform: translate3d(100%, 0, 0);
+	}
+}
